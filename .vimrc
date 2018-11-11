@@ -14,7 +14,8 @@ call plug#begin('~/.vim/plugged')
 
 " List of plugins and stuff
 " Command is 'PlugInstall'
-
+Plug 'adimit/prolog.vim'
+Plug 'vim-syntastic/syntastic'
 Plug 'ervandew/supertab'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sensible'
@@ -35,3 +36,10 @@ colo seoul256
 " Aliases/Key mappings
 map ; :Files<CR>
 map <C-o> :NERDTreeToggle<CR>
+
+
+"split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
