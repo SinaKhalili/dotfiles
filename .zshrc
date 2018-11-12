@@ -111,5 +111,5 @@ alias e="exit"
 alias r="ranger"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 cat /home/sina/.cache/wal/sequences 
-
+clear
 
