@@ -110,6 +110,6 @@ source $ZSH/oh-my-zsh.sh
 alias e="exit"
 alias r="ranger"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
+cat /home/sina/.cache/wal/sequences 
 
 
