@@ -1,0 +1,4 @@
+#!/bin/bash
+ROFI_OPTIONS="-theme purple.rasi"
+
+rofi -dmenu $ROFI_OPTIONS < ~/.emoji | awk '{print $1}' | tr -d '\n' | pbcopy && notify-send "Emoji copied to clipboard"

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+ROFI_OPTIONS="-theme purple.rasi"
+
+nmcli dev wifi rescan
+
+wifi_list=$(nmcli -t dev wifi | awk -F ':' '{print $2}')
+choice=$(echo "$wifi_list" | rofi -dmenu $ROFI_OPTIONS -p "Pick network")
+
+add_pass=$(printf "yes\nno" | rofi -dmenu $ROFI_OPTIONS -p "Add password?")
+if [[ "$add_pass" == "yes" ]]; then
+    password=$(echo "" | rofi -dmenu -theme-str 'listview { enabled: false;}' $ROFI_OPTIONS -p "Password")
+    ans=$(nmcli d wifi c "$choice" password "$password")
+else
+    ans=$(nmcli c up "$choice")
+fi
+
+rofi -e "$ans" $ROFI_OPTIONS

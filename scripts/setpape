@@ -1,0 +1,3 @@
+#!/bin/bash
+choice=$(ls ~/Pictures/Wallpapers | rofi -dmenu -theme purple.rasi)
+wal -i "$HOME/Pictures/Wallpapers/$choice" -o wal-set 2> /dev/null
