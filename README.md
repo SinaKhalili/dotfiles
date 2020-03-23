@@ -8,8 +8,8 @@ It also contains some scripts I use for convenience:
  * [setpape](scripts/setpape) Uses rofi to show a list of wallpapers and sets the chosen one
  * [connect-wifi-rofi](scripts/connect-wifi-rofi) Uses rofi to show a list of networks and tries to connect to the chosen one. 
  Uses nmcli
- * [emoji-prompt](scripts/emoji-prompt) Uses rofi to show a list of emojis to chose from and copies the selected one to the clipboard.
- Based off of luke smith xyz's same script.
+ * [emoji-prompt](scripts/emoji-prompt) Uses rofi to show a list of emojis to chose from and copies the selected one to the clipboard. Requires the .emoji file in the folder to be in $HOME
+ Based off of luke smith xyz's emoji script (whose original script I cannot find :thinking:) 
 
 It love [rofi](https://github.com/davatorium/rofi) and use the [purple](https://github.com/davatorium/rofi/blob/next/themes/purple.rasi) theme. 
 
