@@ -10,7 +10,8 @@ It also contains some scripts I use for convenience:
  Uses nmcli
  * [emoji-prompt](scripts/emoji-prompt) Uses rofi to show a list of emojis to chose from and copies the selected one to the clipboard. Requires the .emoji file in the folder to be in $HOME
  Based off of luke smith xyz's emoji script (whose original script I cannot find :thinking:) 
+ * [ccowsay](scripts/ccowsay) [Cowsay written in cow](https://github.com/SinaKhalili/cowsay-but-in-cow)
 
 It love [rofi](https://github.com/davatorium/rofi) and use the [purple](https://github.com/davatorium/rofi/blob/next/themes/purple.rasi) theme. 
 
-Also emacs is out of date - I'm a spacemacs traitor now :sunglasses: 
+Also the emacs is out of date - I'm a spacemacs traitor now :sunglasses: 
