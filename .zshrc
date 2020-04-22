@@ -1,40 +1,53 @@
-# Matlab is wack and only works like this :(
-export PATH=/usr/local/MATLAB/R2020a/bin:$HOME/dotfiles/scripts:$HOME/bin:/snap/bin:/usr/local/bin:$PATH
+# A bunch of random stuff!! 
+#
+export PATH=$HOME/.yarn/bin:$HOME/development/flutter/bin:/usr/local:$HOME/dotfiles/scripts:$HOME/bin:/snap/bin:$PATH
 
-# Path to my oh-my-zsh installation
-export ZSH="/home/sina/.oh-my-zsh"
+# This is just for git commits - you should always use emacs!!!
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
+# Path to your oh-my-zsh install
+export ZSH="$HOME/.oh-my-zsh"
+
+# Big cheese!! 🧀!! We're going to install a zsh package manager!
 
 # Using the nightly, with:
 # curl -L git.io/antigen-nightly > antigen.zsh
 source ~/antigen.zsh
 
-# Load oh-my-zsh library
+# Load the oh-my-zsh library
 antigen use oh-my-zsh
 
-# zsh builtins
-antigen bundle git
-antigen bundle heroku
-antigen bundle pip
-antigen bundle command-not-found
-antigen bundle z
-antigen bundle pyenv
-antigen bundle thefuck
-antigen bundle colored-man-pages
-antigen bundle fasd
+# zsh has a ton of nice builtins!
+# here just my favs (I haven't even seen them all)
+antigen bundle git # autocompletions
+antigen bundle pip # autocompletions
+antigen bundle heroku # autocompletions
+antigen bundle yarn # autocompletions and path
 
-# zsh-users bundles
+# Python 🐍 and Node 💚 version managers
+antigen bundle pyenv
+antigen bundle lukechilds/zsh-nvm
+
+# A bit more exciting 😎
+antigen bundle command-not-found # suggests commands
+antigen bundle z # jump around!
+antigen bundle colored-man-pages # Neat man pages bro
+
+# zsh-users bundles (an awesome group of devs 🙏)
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-completions
-antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-autosuggestions # Game changer!
 
-# misc zsh plugins
-antigen bundle soimort/you-get
+# Shhh secret 🤫 bundles
+antigen bundle thefuck # 🙃
+antigen bundle fasd # Another z, but with opening!
 
-# the theme! 
-antigen theme therzka/zemoji
+# ESSENTIAL
+antigen bundle SinaKhalili/sina
 
-# don't forget this line!
+# Let's add a theme! 
+antigen theme therzka/zemoji # A cool emoji based theme! 
+
+# Always remember to antigen apply!! 🤗🤗
 antigen apply
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
