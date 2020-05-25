@@ -1,0 +1,6 @@
+#!/bin/bash
+# Usage:
+# ps3convert.sh someRandomMovie.mkv
+# => someRandomMovie.mkv.mp4 # Runs perfectly on ps3
+
+ffmpeg -i "$1" -vcodec libx264 -b:v 2089k -acodec aac -ab 192k "$1".mp4
