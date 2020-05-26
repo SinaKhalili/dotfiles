@@ -1,0 +1,5 @@
+[user]
+	email = khalili@sfu.ca
+	name = sinakhalili
+[core]
+    pager =  diff-so-fancy | less -FXRi
