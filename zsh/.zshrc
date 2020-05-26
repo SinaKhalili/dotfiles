@@ -59,9 +59,18 @@ antigen bundle andrewferrier/fzf-z
 
 # Cool gitignore creation module
 antigen bundle voronkovich/gitignore.plugin.zsh 
+# Nicer git diffing
+antigen bundle zdharma/zsh-diff-so-fancy
 
 # Let's add a theme! 
-antigen theme therzka/zemoji # A cool emoji based theme! 
+if [[ $INSIDE_EMACS ]]; then
+    antigen theme robbyrussell
+else
+    antigen theme therzka/zemoji # A cool emoji based theme! 
+fi
 
 # Always remember to antigen apply!! 🤗🤗
 antigen apply
+
+# Secret environments
+source ~/.zshrc.env
