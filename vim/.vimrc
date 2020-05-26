@@ -29,5 +29,6 @@ augroup numbertoggle " Only relative if it is the focused split
 augroup END
 
 " ================ File-specific =========================
+
 autocmd FileType make set noexpandtab shiftwidth=4 softtabstop=0
 
