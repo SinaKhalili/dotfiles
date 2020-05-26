@@ -1,6 +1,8 @@
 # dotfiles
 :+1:This is just another dotfiles folder comin through! :thinking:
 
+The folder format is for easiy using GNU Stow to symlink the dotfiles to the home folder. I love `stow`! 
+
 This repository contains my configs for: **spacemacs**, **i3wm**, **vim**, **zsh** and **i3blocks** dotfiles.
 
 It also contains some scripts I use for convenience: 
