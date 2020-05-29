@@ -4,6 +4,8 @@ syntax on
 
 set ts=4 sw=4 
 set expandtab
+" Except for Makefiles because they're a needy little boi
+au FileType make setlocal noexpandtab
 
 " ================ Scrolling ========================
 
