@@ -1,9 +1,9 @@
 # dotfiles
 :+1:This is just another dotfiles folder comin through! :thinking:
 
-The folder format is for easily using GNU Stow to symlink the dotfiles to the home folder. I love `stow`! 
+The folder format is for easily using GNU Stow to symlink the dotfiles to the home folder. Now I can just use a little script I wrote in here [stowit.sh](stowit.sh) and boom! All my changes are symlinked!
 
-This repository contains my configs for: **spacemacs**, **i3wm**, **vim**, **zsh** and **i3blocks** dotfiles.
+This repository contains my configs for: **git**, **spacemacs**, **i3wm**, **vim**, **zsh** and **i3blocks** dotfiles.
 
 It also contains some scripts I use for convenience: 
  * [pbcopy](scripts/pbcopy) Just emulate the behaviour of pbcopy on mac (so I can pipe into it)
