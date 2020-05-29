@@ -29,8 +29,3 @@ augroup numbertoggle " Only relative if it is the focused split
   autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
-
-" ================ File-specific =========================
-
-autocmd FileType make set noexpandtab shiftwidth=4 softtabstop=0
-
