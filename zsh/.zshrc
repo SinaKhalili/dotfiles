@@ -34,6 +34,7 @@ antigen bundle yarn # autocompletions and path
 
 # Python 🐍 and Node 💚 version managers
 antigen bundle pyenv
+antigen bundle rbenv
 antigen bundle lukechilds/zsh-nvm
 
 # A bit more exciting 😎
@@ -52,6 +53,7 @@ antigen bundle fasd # Another z, but with opening!
 
 # ESSENTIAL
 antigen bundle SinaKhalili/sina
+antigen bundle SinaKhalili/ignore-dollarsign
 
 # Experimental zone
 antigen bundle desyncr/auto-ls 
