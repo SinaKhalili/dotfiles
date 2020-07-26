@@ -29,3 +29,8 @@ augroup numbertoggle " Only relative if it is the focused split
   autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
+
+" ================ Recovery =====================
+set undofile
+set undodir=~/.vim/undodir
+
