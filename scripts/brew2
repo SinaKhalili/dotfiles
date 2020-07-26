@@ -1,0 +1,2 @@
+# Homebrew without the annoying update at the beginning
+HOMEBREW_NO_AUTO_UPDATE=1 brew $@
