@@ -13,6 +13,7 @@ It also contains some scripts I use for convenience:
  * [emoji-prompt](scripts/emoji-prompt) Uses rofi to show a list of emojis to chose from and copies the selected one to the clipboard. Requires the .emoji file in the folder to be in $HOME
  * [ccowsay](scripts/ccowsay) Cowsay clone [written in cow](https://github.com/SinaKhalili/cowsay-but-in-cow)
  * [ps3convert](scripts/ps3convert) Uses ffmpeg to convert videos (usually .mkv files) to videos that can run on the ps3 from a USB
+ * [brew2](scripts/brew2) Homebrew __without__ doing the annoying long update at the beginning
 
 It love [rofi](https://github.com/davatorium/rofi) and use the [purple](https://github.com/davatorium/rofi/blob/next/themes/purple.rasi) theme. 
 
