@@ -1,6 +1,6 @@
 #!/bin/bash
 
-symlink_folders=(vim git spacemacs zsh) 
+symlink_folders=(vim git spacemacs zsh tmux) 
 
 if [ -z "$1" ]; then
     echo "Stowing the following:"
