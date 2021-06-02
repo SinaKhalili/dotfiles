@@ -1,0 +1,89 @@
+## This is a minimal zshrc *without* a plugin manager OR oh-my-zsh
+# ================================================================
+# Sometimes it's good to know what's running on your computer :^) ... even though im using plugins
+# ================================================================
+
+export EDITOR=vim
+bindkey -e
+export CLICOLOR=1
+export PATH="$PATH:$HOME/go/bin"
+
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' menu select
+
+# ===============================#
+# Your own cool "plugin manager" #
+# Based on: https://www.reddit.com/r/zsh/comments/dlmf7r/manually_setup_plugins/ 
+# ===============================#
+
+github_plugins=(
+  ael-code/zsh-colored-man-pages
+  zsh-users/zsh-autosuggestions
+  zsh-users/zsh-completions
+  zsh-users/zsh-history-substring-search
+  rupa/z
+
+  # Theme
+  miekg/lean
+
+  # Must be last
+  zdharma/fast-syntax-highlighting
+)
+
+for plugin in $github_plugins; do
+    # Clone if not exist
+    if [[ ! -d $HOME/.zsh_plugins/$plugin ]]; then
+        mkdir -p $HOME/.zsh_plugins/${plugin%/*}
+        git clone --depth 1 --recursive https://github.com/$plugin.git $HOME/.zsh_plugins/$plugin
+    fi
+
+    # Load the plugin
+    for initscript in ${plugin#*/}.zsh ${plugin#*/}.plugin.zsh ${plugin#*/}.sh; do
+        if [[ -f $HOME/.zsh_plugins/$plugin/$initscript ]]; then
+            source $HOME/.zsh_plugins/$plugin/$initscript 
+            break
+        fi
+    done
+done
+
+# Unset vars
+unset github_plugins
+unset plugin
+unset initscript
+
+# =======
+# Aliases
+# =======
+alias ls='exa'        #superior ls
+alias l='ls -lFh'     #size,show type,human readable
+alias ll='ls -l'      #long list
+alias la='ls -laFh'   #long list,show almost all,show type,human readable
+# grep
+alias grep='grep --color'
+alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,CVS} '
+# git
+alias gap='git add --patch'
+alias gca!='git commit -v -a --amend'
+alias gl='git pull'
+alias glola="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --all"
+alias gpf!='git push --force'
+alias gpsup='git push --set-upstream origin $(git_current_branch)'
+alias gsb='git status -sb'
+
+# Functions
+# =========
+function take() {
+  mkdir -p $@ && cd ${@:$#}
+}
+
+# =========
+# Initialize other things
+# =========
+eval "$(pyenv init -)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
