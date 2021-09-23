@@ -4,6 +4,8 @@ syntax on
 
 set ts=4 sw=4 
 set expandtab
+set autoindent
+
 " Except for Makefiles because they're a needy little boi
 au FileType make setlocal noexpandtab
 
@@ -31,6 +33,15 @@ augroup numbertoggle " Only relative if it is the focused split
 augroup END
 
 " ================ Recovery =====================
+
 set undofile
 set undodir=~/.vim/undodir
+
+" ================ Colour =====================
+
+highlight LineNr ctermfg=grey
+highlight CursorLineNr ctermfg=252 "Grey70
+
+set cursorline
+highlight CursorLine   cterm=NONE ctermbg=234 ctermfg=NONE      " 234 is almost black
 
