@@ -9,6 +9,10 @@ set autoindent
 " Except for Makefiles because they're a needy little boi
 au FileType make setlocal noexpandtab
 
+" ================ Boundaries ========================
+
+set iskeyword-=_    " will treat snake_case as word boundary
+
 " ================ Scrolling ========================
 
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
