@@ -5,6 +5,24 @@ The folder format is for easily using GNU Stow to symlink the dotfiles to the ho
 
 This repository contains my configs for: **git**, **spacemacs**, **i3wm**, **vim**, **zsh** and **i3blocks** dotfiles.
 
+## Usage on a server
+
+```bash
+# on a computer without oh-my-zsh, use the oh-my-zsh setup script
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# then, use these dotfiles
+git clone https://github.com/SinaKhalili/dotfiles.git
+cp ./dotfiles/zsh/.zshrc ~/.zshrc
+cp ./dotfiles/zsh/antigen.zsh ~/antigen.zsh
+cp ./dotfiles/vim/.vimrc ~/.vimrc
+
+# then, source the setup
+source ~/.zshrc
+```
+
+## Scripts
+
 It also contains some scripts I use for convenience: 
  * [webserver](scripts/webserver) Just a little script to call python's `http.server` to share my current folder on local network
  * [pbcopy](scripts/pbcopy) Emulate the behaviour of pbcopy on mac (to pipe into it)
