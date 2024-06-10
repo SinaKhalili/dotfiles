@@ -8,7 +8,7 @@ export INC_APPEND_HISTORY=true
 
 # you can install antigen with curl -L git.io/antigen-nightly > antigen.zsh
 # but i've also included a mirror here so you can move it to your $HOME as well
-source ~/antigen.zsh
+source ~/.config/antigen/antigen.zsh
 
 antigen use oh-my-zsh
 
