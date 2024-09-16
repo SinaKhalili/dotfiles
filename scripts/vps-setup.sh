@@ -1,8 +1,8 @@
 #  this is a setup for simply getting zsh + vim working on a vps
 # === ZSH ===
-apt install zsh tmux
+sudo apt install zsh tmux
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-mkdir ~/.config/antigen
+mkdir -p ~/.config/antigen
 curl -L git.io/antigen > ~/.config/antigen/antigen.zsh
 curl https://raw.githubusercontent.com/SinaKhalili/dotfiles/master/zsh/.zshrc > ~/.zshrc
 
